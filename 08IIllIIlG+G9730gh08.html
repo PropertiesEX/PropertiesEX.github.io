@@ -16,13 +16,9 @@
     }
   </style>
   <script>
-    // Immediately check for the access flag.
-    // If the user did not arrive here by typing the correct phrase, redirect them back to index.html.
     if(localStorage.getItem("accessGranted") !== "true"){
       window.location.href = "index.html";
     }
-    // Optionally, you might remove the flag after verifying access:
-    // localStorage.removeItem("accessGranted");
   </script>
 </head>
 <body>
