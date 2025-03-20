@@ -4,31 +4,52 @@
   <meta charset="UTF-8">
   <title>Puzzle Page</title>
   <style>
-    body{background:#000;color:#fff;margin:0;height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif}
-    .container{text-align:center}
-    input[type="text"]{padding:10px;font-size:16px;margin-top:20px;width:250px}
-    button{padding:10px 20px;font-size:16px;margin-top:10px;cursor:pointer}
+    body {
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 250px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
   </style>
   <script>
-    document.addEventListener("contextmenu",function(e){e.preventDefault()});
-    document.onkeydown=function(e){
-      if(e.keyCode===123||(e.ctrlKey && e.shiftKey && (e.keyCode===73||e.keyCode===74))||(e.ctrlKey && e.keyCode===85)){
+    document.addEventListener("contextmenu", function(e) { e.preventDefault(); });
+    document.onkeydown = function(e) {
+      if (e.keyCode === 123 ||
+         (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
+         (e.ctrlKey && e.keyCode === 85)) {
         e.preventDefault();
         return false;
       }
     };
-
     (function(){
-      var _0x1a3=["\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x75\x73\x65\x72\x49\x6E\x70\x75\x74","\x76\x61\x6C\x75\x65","\x74\x72\x69\x6D","\x6C\x6F\x77\x65\x72\x43\x61\x73\x65","\x62\x6C\x75\x65\x20\x62\x61\x6C\x6C","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x72\x65\x66"];
-      var _0x2b8="ZnVuY3Rpb24gY2hlY2tJbnB1dCgpIHsKICAgIHZhciB1c2VySW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndXNlcklucHV0JykudmFsdWUudHJpbSgpLnRyaW0oKTsKICAgIGlmKHVzZXJJbnB1dC50b0xvd2VyQ2FzZSgpID09ICdibHVlIGJhbGwnKSB7CiAgICAgICAgd2luZG93Ll\x6CoY2F0aW9uLmhSRUYgPSAiMDhJSUxsSWlsR1IrRzk3MzBnSDA4Lmh0bWwiOwogICAgfQp9";
-      var decoded=atob(_0x2b8);
+      var encoded = "ZnVuY3Rpb24gY2hlY2tJbnB1dCgpIHsKICB2YXIg dXNlcklucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3VzZXJJbnB1dCcpLnZhbHVlLnRyaW0oKTsKICBpZih1c2VySW5wdXQudG9Mb3dlckNhc2UoKS A9PT0gJ2JsdWUgYmFsbCcpIHsKICAgIGxvY2FsU3RvcmFnZS5zZXRBdHRyaWJ1dGUoImFjY2Vzc0dyYW50ZWQiLCAidHJ1ZSIpOwogICAgd2luZG93LmxvY2F0aW9uLmhSRUYgPSAiMDhJSUxsSWlsR0IrRzk3MzBnaDA4Lmh0bWwiOwogIH0KfQ==";
+      var decoded = atob(encoded);
       eval(decoded);
     })();
   </script>
 </head>
 <body>
   <div class="container">
-    <h1>Wouldn't you agree, _______?</h1>
+    <h1>Right, _______?</h1>
     <input type="text" id="userInput" placeholder="Type something...">
     <br>
     <button onclick="checkInput()">Enter</button>
