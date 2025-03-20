@@ -1,1 +1,65 @@
-DOCTYPE.HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Puzzle Page</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 250px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // Disable right-click context menu
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+
+    // Disable some key shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
+    document.onkeydown = function(e) {
+      if(e.keyCode === 123 || 
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+        (e.ctrlKey && e.keyCode === 85)) {
+          e.preventDefault();
+          return false;
+      }
+    };
+
+    function checkInput() {
+      var userInput = document.getElementById("userInput").value.trim();
+      if(userInput.toLowerCase() === "blue ball") {
+        window.location.href = "08IIllIIlG)G09730gh08.html";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Right, _______?</h1>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <br>
+    <button onclick="checkInput()">Enter</button>
+  </div>
+</body>
+</html>
